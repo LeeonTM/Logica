@@ -7,12 +7,118 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/lblTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="@string/title"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblLeftColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/leftColumn"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/lblMiddleColumn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle" />
+
+    <TextView
+        android:id="@+id/lblMiddleColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/middleColumn"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/lblRightColumn"
+        app:layout_constraintStart_toEndOf="@+id/lblLeftColumn"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle" />
+
+    <TextView
+        android:id="@+id/lblRightColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/rightColumn"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblMiddleColumn"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle" />
+
+    <EditText
+        android:id="@+id/txtCase1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:digits="TF"
+        android:ems="10"
+        android:inputType="textCapCharacters"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblMiddleColumn"
+        app:layout_constraintTop_toBottomOf="@+id/lblRightColumn" />
+
+    <EditText
+        android:id="@+id/txtCase2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:digits="TF"
+        android:ems="10"
+        android:inputType="textCapCharacters"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblMiddleColumn"
+        app:layout_constraintTop_toBottomOf="@+id/txtCase1" />
+
+    <EditText
+        android:id="@+id/txtCase3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:digits="TF"
+        android:ems="10"
+        android:inputType="textCapWords"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblMiddleColumn"
+        app:layout_constraintTop_toBottomOf="@+id/txtCase2" />
+
+    <EditText
+        android:id="@+id/txtCase4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:digits="TF"
+        android:ems="10"
+        android:inputType="textCapCharacters"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblMiddleColumn"
+        app:layout_constraintTop_toBottomOf="@+id/txtCase3" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
